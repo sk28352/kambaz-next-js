@@ -4,7 +4,11 @@ import CourseNavigation from "./Navigation";
 export default function CoursesLayout({
   children,
   params,
-}: Readonly<{ children: ReactNode; params: { cid: string } }>) {
+}: {
+  children: ReactNode;
+  params: { cid: string };
+}) {
+  // Access params synchronously
   const { cid } = params;
 
   return (
