@@ -49,131 +49,131 @@ export default function Lab1() {
           This is the third paragraph. Wrap each paragraph with the paragraph
           tag to tell browsers to render the gaps.
         </p>
+      </div>
 
-        <div id="wd-lists">
-          <h4>List Tags</h4>
-          <h5>Ordered List Tag</h5>
-          How to make pancakes:
-          <ol id="wd-pancakes">
-            <li>Mix dry ingredients.</li>
-            <li>Add wet ingredients.</li>
-            <li>Stir to combine.</li>
-            <li>Heat a skillet or griddle.</li>
-            <li>Pour batter onto the skillet.</li>
-            <li>Cook until bubbly on top.</li>
-            <li>Flip and cook the other side.</li>
-            <li>Serve and enjoy!</li>
-          </ol>
+      <div id="wd-lists">
+        <h4>List Tags</h4>
+        <h5>Ordered List Tag</h5>
+        How to make pancakes:
+        <ol id="wd-pancakes">
+          <li>Mix dry ingredients.</li>
+          <li>Add wet ingredients.</li>
+          <li>Stir to combine.</li>
+          <li>Heat a skillet or griddle.</li>
+          <li>Pour batter onto the skillet.</li>
+          <li>Cook until bubbly on top.</li>
+          <li>Flip and cook the other side.</li>
+          <li>Serve and enjoy!</li>
+        </ol>
 
-          <p id="wd-Paneer-Tikka">How to make Paneer Tikka:</p>
+        <p id="wd-Paneer-Tikka">How to make Paneer Tikka:</p>
+        <ol id="wd-your-favorite-recipe">
+          <li>Mix dry ingredients, 200 grams of paneer and add yogurt.</li>
+          <li>Allow ingredients to marinate for about 30 minutes.</li>
+          <li>Heat up three tablespoons of oil in a pan and pour the mix into it.</li>
+          <li>Roast and turn them, cooking on all sides for 3–4 minutes until they are light brown and cooked through.</li>
+          <li>After cooking, brush the tikkas with melted butter or mustard oil for extra flavor.</li>
+          <li>Sprinkle with chaat masala and a squeeze of fresh lemon juice.</li>
+          <li>Paneer tikka is best served hot with mint chutney, sliced onions, and lemon wedges.</li>
+          <li>Serve and Enjoy!</li>
+        </ol>
 
-          <ol id="wd-your-favorite-recipe">
-            <li>Mix dry ingredients, 200 grams of paneer and add yogurt.</li>
-            <li>Allow ingredients to marinate for about 30 minutes.</li>
-            <li>Heat up three tablespoons of oil in a pan and pour the mix into it.</li>
-            <li>Roast and turn them, cooking on all sides for 3–4 minutes until they are light brown and cooked through.</li>
-            <li>After cooking, brush the tikkas with melted butter or mustard oil for extra flavor.</li>
-            <li>Sprinkle with chaat masala and a squeeze of fresh lemon juice.</li>
-            <li>Paneer tikka is best served hot with mint chutney, sliced onions, and lemon wedges.</li>
-            <li>Serve and Enjoy!</li>
-          </ol>
+        <h5>Unordered List Tag</h5>
+        My favorite books (in no particular order):
+        <ul id="wd-my-books">
+          <li>Dune</li>
+          <li>Lord of the Rings</li>
+          <li>Ender&apos;s Game</li>
+          <li>Red Mars</li>
+          <li>The Forever War</li>
+        </ul>
 
-          <h5>Unordered List Tag</h5>
-          My favorite books (in no particular order):
-          <ul id="wd-my-books">
-            <li>Dune</li>
-            <li>Lord of the Rings</li>
-            <li>Ender's Game</li>
-            <li>Red Mars</li>
-            <li>The Forever War</li>
-          </ul>
+        My favorite books (in no particular order):
+        <ul id="wd-your-books">
+          <li>The cry of the Tiger</li>
+          <li>White Nights</li>
+          <li>Windmills of The Gods</li>
+          <li>The Science of Rapid Skill Learning</li>
+          <li>Autobiography of a yogi</li>
+        </ul>
+      </div>
 
-          My favorite books (in no particular order):
-          <ul id="wd-your-books">
-            <li>The cry of the Tiger</li>
-            <li>White Nights</li>
-            <li>Windmills of The Gods</li>
-            <li>The Science of Rapid Skill Learning</li>
-            <li>Autobiography of a yogi</li>
-          </ul>
-        </div>
-
-        <div id="wd-tables">
-          <h4>Table Tag</h4>
-          <table border={1} width="100%">
-            <thead>
-              <tr>
-                <th>Quiz</th>
-                <th>Topic</th>
-                <th>Date</th>
-                <th>Grade</th>
+      <div id="wd-tables">
+        <h4>Table Tag</h4>
+        <table border={1} width="100%">
+          <thead>
+            <tr>
+              <th>Quiz</th>
+              <th>Topic</th>
+              <th>Date</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Q1","HTML","2/3/21","85"],
+              ["Q2","CSS","2/10/21","90"],
+              ["Q3","Bootstrap & Flex","2/17/21","78"],
+              ["Q4","JavaScript & React","2/22/21","87"],
+              ["Q5","Routing","2/29/21","68"],
+              ["Q6","State & Redux","3/12/21","90"],
+              ["Q7","Node","3/19/21","92"],
+              ["Q8","Session","3/26/21","89"],
+              ["Q9","MongoDB","4/7/21","100"],
+              ["Q10","Mongoose","4/14/21","99"],
+            ].map(([q, t, d, g]) => (
+              <tr key={q}>
+                <td>{q}</td><td>{t}</td><td>{d}</td><td>{g}</td>
               </tr>
-            </thead>
-            <tbody>
-              {[
-                ["Q1","HTML","2/3/21","85"],
-                ["Q2","CSS","2/10/21","90"],
-                ["Q3","Bootstrap & Flex","2/17/21","78"],
-                ["Q4","JavaScript & React","2/22/21","87"],
-                ["Q5","Routing","2/29/21","68"],
-                ["Q6","State & Redux","3/12/21","90"],
-                ["Q7","Node","3/19/21","92"],
-                ["Q8","Session","3/26/21","89"],
-                ["Q9","MongoDB","4/7/21","100"],
-                ["Q10","Mongoose","4/14/21","99"],
-              ].map(([q, t, d, g]) => (
-                <tr key={q}>
-                  <td>{q}</td><td>{t}</td><td>{d}</td><td>{g}</td>
-                </tr>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr><td colSpan={3}>Average</td><td>90</td></tr>
-            </tfoot>
-          </table>
-        </div>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr><td colSpan={3}>Average</td><td>90</td></tr>
+          </tfoot>
+        </table>
+      </div>
 
-        <div id="wd-images">
-          <h4>Image tag</h4>
-          Loading an image from the internet:<br />
-          <img
-            id="wd-starship"
-            src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"
-            width="400px"
-            height="250px"
-            alt="Starship"
-          /><br />
-          Loading a local image:<br />
-          <img
-            id="wd-teslabot"
-            src="/images/teslabot.jpg.jpg"
-            width="200px"
-            height="200px"
-            alt="Teslabot"
+      <div id="wd-images">
+        <h4>Image tag</h4>
+        Loading an image from the internet:<br />
+        <img
+          id="wd-starship"
+          src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"
+          width="400px"
+          height="250px"
+          alt="Starship"
+        /><br />
+        Loading a local image:<br />
+        <img
+          id="wd-teslabot"
+          src="/images/teslabot.jpg.jpg"
+          width="200px"
+          height="200px"
+          alt="Teslabot"
+        />
+      </div>
+
+      <div id="wd-forms">
+        <h4>Form Elements</h4>
+        <form id="wd-text-fields">
+          <h5>Text Fields</h5>
+          <label htmlFor="wd-text-fields-username">Username:</label>
+          <input placeholder="jdoe" id="wd-text-fields-username" /> <br />
+          <label htmlFor="wd-text-fields-password">Password:</label>
+          <input type="password" defaultValue="123@#$asd" id="wd-text-fields-password" /><br />
+          <label htmlFor="wd-text-fields-first-name">First name:</label>
+          <input type="text" title="John" id="wd-text-fields-first-name" /> <br />
+          <label htmlFor="wd-text-fields-last-name">Last name:</label>
+          <input type="text" placeholder="Doe" defaultValue="Wonderland" title="The last name" id="wd-text-fields-last-name" />
+          
+          <h5>Text boxes</h5>
+          <label>Biography:</label><br/>
+          <textarea
+            id="wd-textarea"
+            cols={30}
+            rows={10}
+            defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting industry..."
           />
-        </div>
-
-        <div id="wd-forms">
-          <h4>Form Elements</h4>
-          <form id="wd-text-fields">
-            <h5>Text Fields</h5>
-            <label htmlFor="wd-text-fields-username">Username:</label>
-            <input placeholder="jdoe" id="wd-text-fields-username" /> <br />
-            <label htmlFor="wd-text-fields-password">Password:</label>
-            <input type="password" defaultValue="123@#$asd" id="wd-text-fields-password" /><br />
-            <label htmlFor="wd-text-fields-first-name">First name:</label>
-            <input type="text" title="John" id="wd-text-fields-first-name" /> <br />
-            <label htmlFor="wd-text-fields-last-name">Last name:</label>
-            <input type="text" placeholder="Doe" defaultValue="Wonderland" title="The last name" id="wd-text-fields-last-name" />
-            
-            <h5>Text boxes</h5>
-            <label>Biography:</label><br/>
-            <textarea
-              id="wd-textarea"
-              cols={30}
-              rows={10}
-              defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting industry..."
-            />
             
             <h4>Other HTML field types</h4>
             <label htmlFor="wd-text-fields-email"> Email: </label>
@@ -231,9 +231,9 @@ export default function Lab1() {
 
         <h4>Anchor tag</h4>
         Please <a href="https://www.lipsum.com" id="wd-lipsum">click here</a> to get dummy text<br/>
-        Please <a href="https://github.com/sk28352/kambaz-next-js" id="wd-github">click here</a> to get to github repository<br/>
+        Please <a  href="https://github.com/sk28352/kambaz-next-js" id="wd-github">click here</a> to get to github repository<br/>
+
 
       </div>
-    </div>
   );
 }
