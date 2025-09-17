@@ -9,7 +9,7 @@ export default function Dashboard()
 
 <div id="wd-dashboard-courses"> <div className="wd-dashboard-course"> 
     <Link href="/Courses/1234" className="wd-dashboard-course-link"> 
-    <img src="/images/reactjs.jpg" width={200} height={150} /> 
+    <img src="/images/reactjs.jpg" width="200px" height="150px" alt = "React Logo" /> 
 <div> <h5> CS1234 React JS </h5> 
 <p className="wd-dashboard-course-title"> 
 Full Stack software developer </p> 
@@ -17,7 +17,7 @@ Full Stack software developer </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/5800" className="wd-dashboard-course-link"> 
-    <img src="/images/algos.jpg" width={200} height={150} /> 
+    <img src="/images/algos.jpg"width="200px" height="150px" alt="Algorithms Logo"/>
 <div> <h5> CS5800 Algorithms </h5> 
 <p className="wd-dashboard-course-title"> 
 Core computer science </p> 
@@ -25,7 +25,7 @@ Core computer science </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/5200" className="wd-dashboard-course-link"> 
-    <img src="/images/dbms.jpg" width={200} height={150} /> 
+    <img src="/images/dbms.jpg" width="200px" height="150px" alt = "Database Logo"/> 
 <div> <h5> CS5200 Database Management </h5> 
 <p className="wd-dashboard-course-title"> 
 Database Engineer </p> 
@@ -33,7 +33,7 @@ Database Engineer </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/6120" className="wd-dashboard-course-link"> 
-    <img src="/images/nlp.jpg" width={200} height={150} /> 
+    <img src="/images/nlp.jpg" width="200px" height="150px" alt = "NLP Logo"/> 
 <div> <h5> CS6120 Natural Language Processing </h5> 
 <p className="wd-dashboard-course-title"> 
 NLP Engineer </p> 
@@ -41,7 +41,7 @@ NLP Engineer </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/2345" className="wd-dashboard-course-link"> 
-    <img src="/images/ai.jpg" width={200} height={150} /> 
+    <img src="/images/ai.jpg" width="200px" height="150px" alt = "AI Logo"/> 
 <div> <h5> CS Foundations of AI </h5> 
 <p className="wd-dashboard-course-title"> 
 AI Engineer </p> 
@@ -49,7 +49,7 @@ AI Engineer </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/4567" className="wd-dashboard-course-link"> 
-    <img src="/images/rei.jpg" width={200} height={150} /> 
+    <img src="/images/rei.jpg" width="200px" height="150px" alt = "Reinforcement Logo" /> 
 <div> <h5> CS 4567 Reinforcement Learning </h5> 
 <p className="wd-dashboard-course-title"> 
 Agent Learner Developer </p> 
@@ -57,7 +57,7 @@ Agent Learner Developer </p>
 
 <div className="wd-dashboard-course"> 
     <Link href="/Courses/5678" className="wd-dashboard-course-link"> 
-    <img src="/images/cloud.jpg" width={200} height={150} /> 
+    <img src="/images/cloud.jpg" width="200px" height="150px" alt = "Cloud Computing Logo"/> 
 <div> <h5> CS 5678 Cloud computing</h5> 
 <p className="wd-dashboard-course-title"> 
 Cloud Engineer </p> 
