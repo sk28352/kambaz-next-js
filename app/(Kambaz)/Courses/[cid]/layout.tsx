@@ -1,16 +1,11 @@
 import { ReactNode } from "react";
 import CourseNavigation from "./Navigation";
 
-interface CoursesLayoutProps {
+export default function CoursesLayout({ children, params, }: {
   children: ReactNode;
-  params: Promise<{ cid: string }>; // params is a Promise now
-}
-
-export default async function CoursesLayout({
-  children,
-  params,
-}: CoursesLayoutProps) {
-  const { cid } = await params; // await resolves the Promise
+  params: { cid: string };
+}) {
+  const { cid } = params;
 
   return (
     <div id="wd-courses">
@@ -29,5 +24,4 @@ export default async function CoursesLayout({
         </tbody>
       </table>
     </div>
-  );
-}
+  );}
