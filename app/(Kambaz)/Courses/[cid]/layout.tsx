@@ -8,7 +8,10 @@ interface CoursesLayoutProps {
   };
 }
 
-export default function CoursesLayout({ children, params }: CoursesLayoutProps) {
+export default function CoursesLayout({ children, params }: {
+  children: ReactNode;
+  params: { cid: string };
+}) {
   const { cid } = params;
 
   return (
