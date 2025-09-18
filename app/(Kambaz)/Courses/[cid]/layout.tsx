@@ -1,15 +1,13 @@
 import { ReactNode } from "react";
 import CourseNavigation from "./Navigation";
 
-export default function CoursesLayout({
-  children,
-  params,
-}: {
+interface CoursesLayoutProps {
   children: ReactNode;
   params: { cid: string };
-}) {
-  // Access params synchronously
-  const { cid } = params;
+}
+
+export default function CoursesLayout({ children, params }: CoursesLayoutProps) {
+  const { cid } = params; // synchronous access
 
   return (
     <div id="wd-courses">
