@@ -1,11 +1,16 @@
 import { ReactNode } from "react";
 import CourseNavigation from "./Navigation";
 
-export default function CoursesLayout(props: { 
-  children: ReactNode; 
-  params: { cid: string }; 
-}) {
-  const cid = props.params?.cid ?? "";
+interface CoursesLayoutProps {
+  children: ReactNode;
+  params: { cid: string };
+}
+
+export default function CoursesLayout({
+  children,
+  params,
+}: CoursesLayoutProps): React.ReactElement {
+  const { cid } = params;
 
   return (
     <div id="wd-courses">
@@ -18,12 +23,10 @@ export default function CoursesLayout(props: {
               <CourseNavigation />
             </td>
             <td valign="top" width="100%">
-              {props.children}
+              {children}
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-  );
-}
-
+  );}
