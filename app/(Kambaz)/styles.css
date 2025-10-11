@@ -1,0 +1,188 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Apply offset only when sidebar is visible */
+@media (min-width: 768px) {
+  #wd-kambaz .wd-main-content-offset {
+    padding-left: 140px !important; /* pushes content right */
+  }
+}
+
+/* Override Bootstrap active class for Kambaz Course Navigation */
+.list-group.wd > .list-group-item.active {
+  color: black;
+  background-color: white;
+  border-left: 3px solid black !important;
+}
+
+/* Module & Lesson styling */
+#wd-modules .wd-module {
+  border: 1px solid gray;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+.wd-title {
+  padding: 0.75rem 0.5rem;
+  background-color: #c7cdd1; /* overridden bg-secondary */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wd-lessons .wd-lesson {
+  border-left: 3px solid green !important;
+  padding: 0.75rem 0.25rem;
+}
+
+.wd-content-item {
+  padding-left: 1.5rem !important;
+}
+
+/* Buttons overrides */
+.btn-secondary {
+  --bs-btn-color: #000 !important;
+  --bs-btn-bg: #c7cdd1 !important;
+  --bs-btn-border-color: #c7cdd1 !important;
+  --bs-btn-hover-color: #fff !important;
+}
+
+.bg-secondary {
+  --bs-secondary-rgb: 199, 205, 209;
+}
+
+/* CourseStatus panel styling */
+#wd-course-status {
+  width: 350px;
+  padding: 15px;
+  background-color: #f8f9fa; /* light gray background */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#wd-course-status h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#wd-course-status .btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 500;
+}
+
+#wd-course-status .btn .fs-5 {
+  vertical-align: middle;
+}
+
+#wd-course-status .d-flex > div {
+  margin-bottom: 8px;
+}
+
+#wd-course-status .w-100 {
+  margin-top: 5px;
+}
+
+/* Optional spacing tweaks for ModulesControls */
+#wd-modules-controls {
+  margin-bottom: 1rem;
+}
+
+/* Optional: small adjustments for icons in control buttons */
+.wd-title .fs-3, .wd-lesson .fs-3 {
+  vertical-align: middle;
+}
+
+.wd-lesson .float-end, .wd-module .float-end {
+  display: flex;
+  align-items: center;
+}
+
+#wd-assignments {
+  margin-top: 20px;
+}
+
+#wd-assignments-controls input#wd-search-assignment {
+  height: 45px;
+  border-radius: 4px;
+}
+
+.wd-assignment-list-item {
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  border-left: 3px solid green !important;
+  border-radius: 4px;
+  padding: 16px !important;
+}
+
+.wd-assignment-list-item:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.wd-assignment-link > div {
+  line-height: 1.3;
+}
+
+.wd-assignment-link .text-muted {
+  font-size: 0.875rem;
+}
+
+/* Assignment Editor Screen */
+#wd-assignments-editor {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#wd-assignments-editor h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+#wd-assignments-editor label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#wd-assignments-editor input,
+#wd-assignments-editor textarea,
+#wd-assignments-editor select {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+#wd-assignments-editor textarea {
+  resize: vertical;
+}
+
+#wd-assignments-editor .form-check {
+  padding-left: 0;
+}
+
+#wd-assignments-editor .form-check-input {
+  margin-right: 0.5rem;
+}
+
+#wd-assignments-editor .row {
+  margin-bottom: 1rem;
+}
+
+#wd-assignments-editor .col-md-4,
+#wd-assignments-editor .col-md-8 {
+  margin-bottom: 0.5rem;
+}
+

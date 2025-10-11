@@ -1,13 +1,23 @@
 import { ReactNode } from "react";
-import AccountNavigation from "./Navigation";
+import KambazNavigation from "./Navigation"; // should use KambazNavigation, not AccountNavigation
+import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function AccountLayout({ children }: Readonly<{ children: ReactNode }>) {
+
+export default function KambazLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <div id="wd-kambaz">
-      <table><tbody><tr>
-        <td valign="top"><AccountNavigation /></td>
-        <td valign="top" width="100%">{children}</td>
-      </tr></tbody></table>
+      <div className="d-flex">
+        {/* Fixed sidebar */}
+        <div>
+          <KambazNavigation />
+        </div>
+
+        {/* Main content with responsive offset */}
+        <div className="wd-main-content-offset p-3 flex-fill">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
