@@ -1,4 +1,6 @@
-import "./index.css"
+'use client';
+
+import "./index.css";
 import ForegroundColors from "./ForegroundColors";
 import BackgroundColors from "./BackgroundColors";
 import Borders from "./Borders";
@@ -16,6 +18,7 @@ import BootstrapGrids from "./BootstrapGrids";
 import { Container } from "react-bootstrap";
 import ScreenSizeLabel from "./ScreenSizeLabel";
 import BootstrapNavigation from "./BootstrapNavigation";
+import Image from "next/image";
 
 export default function Lab2() {
   return (
@@ -25,9 +28,9 @@ export default function Lab2() {
         <h3>Styling with the STYLE attribute</h3>
         <p>
           Style attribute allows configuring look and feel
-          right on the element. Although it's very convenient,
+          right on the element. Although it&apos;s very convenient
           it is considered bad practice and you should avoid
-          using the style attribute.
+          using the style attribute
         </p>
       </Container>
 
@@ -35,20 +38,21 @@ export default function Lab2() {
         <h3>ID selectors</h3>
         <p id="wd-id-selector-1">
           Instead of changing the look and feel of all the 
-          elements of the same name, e.g., P, we can refer to a specific element by its ID.
+          elements of the same name, e.g., P, we can refer to a specific element by its ID
         </p>
         <p id="wd-id-selector-2">
-          Here's another paragraph using a different ID and a different look and feel.
+          Here&apos;s another paragraph using a different ID and a different look and
+          feel
         </p>
       </div>
 
       <div id="wd-css-class-selectors">
         <h3>Class selectors</h3>
         <p className="wd-class-selector">
-          Instead of using IDs to refer to elements, you can use an element's CLASS attribute.
+          Instead of using IDs to refer to elements, you can use an element&apos;s CLASS attribute
         </p>
         <h4 className="wd-class-selector">
-          This heading has the same style as paragraph above.
+          This heading has same style as paragraph above
         </h4>
       </div>
 
@@ -56,30 +60,28 @@ export default function Lab2() {
         <div className="wd-selector-1">
           <h3>Document structure selectors</h3>
           <div className="wd-selector-2">
-            Selectors can be combined to refer elements in particular places in the document.
+            Selectors can be combined to refer elements in particular
+            places in the document
             <p className="wd-selector-3">
-              This paragraph's red background is referenced as
+              This paragraph&apos;s red background is referenced as
               <br />
               .selector-2 .selector3
               <br />
               meaning the descendant of some ancestor.
               <br />
               <span className="wd-selector-4">
-                Whereas this span is a direct child of its parent.
+                Whereas this span is a direct child of its parent
               </span>
               <br />
               You can combine these relationships to create specific 
-              styles depending on the document structure.
+              styles depending on the document structure
             </p>
           </div>
         </div>
       </div>
 
-      {/* Example image fixed with alt text */}
-      <div id="wd-css-images">
-        <h3>Example Image</h3>
-        <img src="/images/stacked.jpg" alt="Stacked layout example" />
-      </div>
+      {/* Replace any images with next/image */}
+      <Image src="/images/stacked.jpg" alt="Stacked diagram" width={500} height={300} />
 
       <ForegroundColors />
       <BackgroundColors />
