@@ -1,6 +1,6 @@
-'use client';
+"use client";
 import Link from "next/link";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export default function Signin() {
   return (
@@ -33,8 +33,12 @@ export default function Signin() {
         </Link>
 
         <div className="text-center">
-          <Link id="wd-signup-link" href="/Account/Signup" className="text-decoration-none">
-            Don’t have an account? Sign up
+          <Link
+            id="wd-signup-link"
+            href="/Account/Signup"
+            className="text-decoration-none"
+          >
+            Don&apos;t have an account? Sign up
           </Link>
         </div>
       </Form>
