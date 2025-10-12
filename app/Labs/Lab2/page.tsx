@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import "./index.css";
 import ForegroundColors from "./ForegroundColors";
@@ -18,7 +18,6 @@ import BootstrapGrids from "./BootstrapGrids";
 import { Container } from "react-bootstrap";
 import ScreenSizeLabel from "./ScreenSizeLabel";
 import BootstrapNavigation from "./BootstrapNavigation";
-import Image from "next/image";
 
 export default function Lab2() {
   return (
@@ -27,22 +26,18 @@ export default function Lab2() {
         <h2>Lab 2 - Cascading Style Sheets</h2>
         <h3>Styling with the STYLE attribute</h3>
         <p>
-          Style attribute allows configuring look and feel
-          right on the element. Although it&apos;s very convenient
-          it is considered bad practice and you should avoid
-          using the style attribute
+          Style attribute allows configuring look and feel right on the element.
+          Although it&apos;s very convenient it is considered bad practice and you should avoid using the style attribute
         </p>
       </Container>
 
       <div id="wd-css-id-selectors">
         <h3>ID selectors</h3>
         <p id="wd-id-selector-1">
-          Instead of changing the look and feel of all the 
-          elements of the same name, e.g., P, we can refer to a specific element by its ID
+          Instead of changing the look and feel of all the elements of the same name, e.g., P, we can refer to a specific element by its ID
         </p>
         <p id="wd-id-selector-2">
-          Here&apos;s another paragraph using a different ID and a different look and
-          feel
+          Here&apos;s another paragraph using a different ID and a different look and feel
         </p>
       </div>
 
@@ -60,8 +55,7 @@ export default function Lab2() {
         <div className="wd-selector-1">
           <h3>Document structure selectors</h3>
           <div className="wd-selector-2">
-            Selectors can be combined to refer elements in particular
-            places in the document
+            Selectors can be combined to refer elements in particular places in the document
             <p className="wd-selector-3">
               This paragraph&apos;s red background is referenced as
               <br />
@@ -73,15 +67,11 @@ export default function Lab2() {
                 Whereas this span is a direct child of its parent
               </span>
               <br />
-              You can combine these relationships to create specific 
-              styles depending on the document structure
+              You can combine these relationships to create specific styles depending on the document structure
             </p>
           </div>
         </div>
       </div>
-
-      {/* Replace any images with next/image */}
-      <Image src="/images/stacked.jpg" alt="Stacked diagram" width={500} height={300} />
 
       <ForegroundColors />
       <BackgroundColors />
@@ -96,8 +86,8 @@ export default function Lab2() {
       <GridLayout />
       <Flex />
       <ReactIconsSampler />
-      <BootstrapGrids/>
-      <ScreenSizeLabel/>
+      <BootstrapGrids />
+      <ScreenSizeLabel />
       <BootstrapNavigation />
     </div>
   );
