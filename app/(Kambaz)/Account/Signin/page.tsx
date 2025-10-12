@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Form, Card, Container } from "react-bootstrap"; // removed Button
+import { Form, Card, Container } from "react-bootstrap";
 
 export default function Signin() {
   return (
