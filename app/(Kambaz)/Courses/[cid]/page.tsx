@@ -6,3 +6,4 @@ export default function CoursesPage({ params, }:
   const { cid } = params;
   redirect(`/Courses/${cid}/Home`);
 }
+

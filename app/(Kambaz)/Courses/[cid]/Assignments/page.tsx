@@ -1,34 +1,39 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
-import Link from "next/link";
-import AssignmentControls from "./AssignmentControls";
 import { BsGripVertical } from "react-icons/bs";
+import { assignments as allAssignments } from "../../../Database";
+import AssignmentControls from "./AssignmentControls";
 import AssignmentControlButtons from "./AssignmentControlButtons";
+import Link from "next/link";
 
 export default function Assignments() {
-  const assignments = [
-    { id: "5678", title: "A1 - ENV + HTML", availability: "Not available until May 6", due: "May 12", points: 100 },
-    { id: "5679", title: "A2 - CSS and Bootstrap", availability: "Not available until May 12", due: "May 19", points: 100 },
-    { id: "5680", title: "A3 - Javascript + React", availability: "Not available until May 19", due: "May 27", points: 100 },
-  ];
+  const { cid } = useParams();
+
+  const courseAssignments = allAssignments.filter(a => a.course === cid);
 
   return (
     <div id="wd-assignments">
       <AssignmentControls />
 
+      {courseAssignments.length === 0 && (
+        <p className="text-muted">No assignments available for this course.</p>
+      )}
+
       <ListGroup className="rounded-0" id="wd-assignment-list">
-        {assignments.map((a) => (
+        {courseAssignments.map(a => (
           <ListGroupItem
-            key={a.id}
+            key={a._id}
             className="wd-assignment-item p-3 mb-3 border-start border-3 border-success"
           >
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-3" />
-              <Link href={`/Courses/1234/Assignments/${a.id}`} className="flex-grow-1 text-decoration-none text-dark">
+              <Link
+                href={`/Courses/${cid}/Assignments/${a._id}`}
+                className="flex-grow-1 text-decoration-none text-dark"
+              >
                 <div className="fw-bold">{a.title}</div>
-                <div className="text-muted small">{a.availability}</div>
-                <div className="text-muted small">
-                  <b>Due</b> {a.due} | {a.points} points
-                </div>
               </Link>
               <AssignmentControlButtons />
             </div>

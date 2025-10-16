@@ -1,67 +1,49 @@
-import Link from "next/link";
+"use client";
 
-export default function CourseNavigation() {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function CourseNavigation({ cid }: { cid: string }) {
+  const pathname = usePathname();
+
+  const links = [
+    "Home",
+    "Modules",
+    "Piazza",
+    "Zoom",
+    "Assignments",
+    "Quizzes",
+    "Grades",
+    "People"
+  ];
+
   return (
     <div
       id="wd-courses-navigation"
       className="list-group fs-5 rounded-0"
       style={{ minWidth: "180px" }}
     >
-      <Link
-        href="/Courses/1234/Home"
-        id="wd-course-home-link"
-        className="list-group-item list-group-item-action active border-0"
-      >
-        Home
-      </Link>
+      {links.map((link) => {
+        // Determine href
+        let href = `/Courses/${cid}/${link}`;
+        // For People, append /Table
+        if (link === "People") href += "/Table";
 
-      <Link
-        href="/Courses/1234/Modules"
-        id="wd-course-modules-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        Modules
-      </Link>
+        // Check if this link is active
+        const isActive = pathname.startsWith(href);
 
-      <Link
-        href="/Courses/1234/Piazza"
-        id="wd-course-piazza-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        Piazza
-      </Link>
-
-      <Link
-        href="/Courses/1234/Zoom"
-        id="wd-course-zoom-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        Zoom
-      </Link>
-
-      <Link
-        href="/Courses/1234/Assignments"
-        id="wd-course-assignments-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        Assignments
-      </Link>
-
-      <Link
-        href="/Courses/1234/Quizzes"
-        id="wd-course-quizzes-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        Quizzes
-      </Link>
-
-      <Link
-        href="/Courses/1234/People/Table"
-        id="wd-course-people-link"
-        className="list-group-item list-group-item-action text-danger border-0"
-      >
-        People
-      </Link>
+        return (
+          <Link
+            key={link}
+            href={href}
+            className={`list-group-item list-group-item-action border-0 ${
+              isActive ? "active" : "text-danger"
+            }`}
+          >
+            {link}
+          </Link>
+        );
+      })}
     </div>
   );
 }
